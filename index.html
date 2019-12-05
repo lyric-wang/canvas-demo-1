@@ -47,6 +47,9 @@
             drawLine(last[0], last[1], e.clientX, e.clientY);
             last = [e.clientX, e.clientY];
           }
+          canvas.onmouseup = () => {
+            painting = false;
+          };
         };
       }
       function drawLine(x1, y1, x2, y2) {
